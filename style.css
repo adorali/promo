@@ -1,48 +1,56 @@
 body {
+    padding-top: 100px; 
     background-color: black;
+    color: white;
 }
 
 /* links */
 
 h1 {
     color: #c3dbfa;
-    padding: 0px 20px 0px 10px;
+    padding: 0px 10px;
 }
 
-a {
-    border-right: 1px solid #bbb;
+ul {
+    list-style-type: none;
+}
+
+li {
     float: right;
+    padding: 14px 16px;
+}
+
+li a {
+    align-self: right;
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
 }
 
-a:last-child {
-    border-right: none;
-}
-
-a.active {
-    background-color: #c3dbfa;
-}
-
-a:hover, a:focus {
-    color: white;
+li a:hover, li a:focus {
+    color: #bbb;
     text-decoration: none;
-    background-color: #939393;
 }
 
 /* projects */
 
+#projects {
+    padding: 100px 30px;
+}
+
 .project-window {
     color: rgba(0, 0, 0, 0);
+
     position: relative;
+    display: inline-block;
     top: 0;
     left: 0;
 
-    width: 200px;
-    height: 200px;
+    width: 225px;
+    height: 225px;
+    margin: 10px;
+
     background-size: cover;
     background-position: top;
 
@@ -51,20 +59,25 @@ a:hover, a:focus {
     box-shadow: 0px 0px 15px 4px black inset;
 }
 
-
-.project-window:focus > .overlay, .project-window:hover > .overlay {
-    width: 200px;
-    height: 200px;
+.overlay {
+    width: inherit;
+    height: inherit;
     top: inherit;
     left: inherit;
     position: absolute;
 
-    background-color:rgba(0, 0, 0, .7);
-
     border-radius: 100%;
 
-    color: rgba(255, 255, 255, 1);
+    background-color:rgba(0, 0, 0, 0);
+
+    color: rgba(0, 0, 0, 0);
     text-align: center;
     vertical-align: middle;
-    line-height: 170px;
+    line-height: 200px;
+}
+
+
+.project-window:focus > .overlay, .project-window:hover > .overlay {
+    background-color:rgba(0, 0, 0, .7);
+    color: rgba(255, 255, 255, 1);
 }
